@@ -1,0 +1,132 @@
+/* Import Font from Google */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Helvetica, "Libre Franklin", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 10px;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#scroll-down {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 10px;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  -webkit-animation: upDown 1000ms linear infinite;
+          animation: upDown 1000ms linear infinite;
+}
+
+.up-down {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+  -webkit-animation: upDown 1000ms linear infinite;
+          animation: upDown 1000ms linear infinite;
+  position: absolute;
+  bottom: 2rem;
+  left: 10px;
+}
+.up-down i {
+  color: #000;
+}
+
+@-webkit-keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* Common CSS */
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bg-dark {
+  color: #fff;
+  background-color: #000;
+}
+
+.bg-light {
+  color: #000;
+  background-color: #fff;
+}
+
+.tribute-badge {
+  align-self: flex-start;
+  letter-spacing: 10px;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.banner {
+  background-image: url(https://imagensemoldes.com.br/wp-content/uploads/2020/10/Nikola-Tesla-PNG-791x1024.png);
+  background-position: right 4rem;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  filter: saturate(0.5);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}/*# sourceMappingURL=style.css.map */
