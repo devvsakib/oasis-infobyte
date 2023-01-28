@@ -1,0 +1,93 @@
+body {
+}
+
+.card-pd {
+    padding: 0;
+    background-color: white;
+    max-width: 400px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px rgba(100, 100, 100, 0.1);
+}
+.card-pd input{
+    border: none;
+    border-radius: 0 !important;
+    padding: 10px;
+    width: 100%;
+    outline: none;
+    padding:15px  20px !important;
+    background: transparent;
+}
+.card-pd button{
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 0 5px 5px 0;
+}
+.task-list{
+    margin-top: 3rem;
+}
+.card-pd input{
+    background: transparent;
+}
+
+.navbar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.noteDiv > div{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+}
+.completed {
+    margin: 0;
+}
+.completed{
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+.completed span{
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 1.12rem;
+}
+.todoCard {
+    background-color: white;
+    border-radius: 6px;
+    color: #000 !important;
+    box-shadow: 0 0 5px 0 rgba(40, 6, 190, 0.5);
+    color: #fff;
+    border: none;
+}
+
+.res-form {
+    visibility: hidden;
+}
+
+@media (max-width: 991px) {
+    .res-form {
+        visibility: visible;
+    }
+}
+.music{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 5px 10px;
+    border-radius: 10px;
+
+}
+#playSound{
+    width: 20px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.music p {
+    font-weight: 600;
+    margin-bottom: 0 !important;
+}

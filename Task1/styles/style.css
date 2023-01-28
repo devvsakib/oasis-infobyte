@@ -162,4 +162,89 @@ ul {
     flex: auto;
     text-align: center;
   }
+}
+.biography h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+.biography p {
+  text-align: justify;
+  letter-spacing: 2px;
+}
+.biography span {
+  color: aquamarine;
+  font-weight: bold;
+}
+.biography .up-down i {
+  color: white;
+}
+
+#fourth-page {
+  max-width: 900px;
+  padding: 3rem 0;
+  height: auto;
+}
+#fourth-page .container {
+  padding: 2rem;
+}
+#fourth-page h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+#fourth-page h3 span {
+  color: rgb(0, 204, 255);
+}
+#fourth-page p {
+  text-align: justify;
+  letter-spacing: 2px;
+}
+#fourth-page span {
+  font-weight: bold;
+}
+#fourth-page .up-down i {
+  color: white;
+}
+#fourth-page ul {
+  position: relative;
+}
+#fourth-page li {
+  position: relative;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(45, 45, 43, 0.15);
+  margin-bottom: 40px;
+}
+#fourth-page .circle {
+  display: block;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgb(0, 204, 255);
+}
+#fourth-page .line {
+  position: absolute;
+  left: -20px;
+  top: 40px;
+  transform: translateY(40px);
+  width: 2px;
+  height: 100%;
+  background: rgb(0, 204, 255);
+}
+#fourth-page .inv-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+#fourth-page .description {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 10px;
+  letter-spacing: normal;
 }/*# sourceMappingURL=style.css.map */

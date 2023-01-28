@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do WebApp - Task 3</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="music">
+        <p>
+        <img id="playSound" src="./play-solid.svg" alt="">
+            Relaxing Sound</p>
+    </div>
+    <div class="container py-5 mx-auto">
+        <!-- Note input section began -->
+        <div class="noteDiv">
+            <h5 class="card-title">Add TASK</h5>
+            <div>
+                <div class="card-pd d-flex">
+                    <input class="addNote" id="addNote" placeholder="Write Your Notes Here..."></input>
+                    <button class="btn btn-danger" id="inputNote">Add</button>
+                </div>
+                <div>
+                    <p class="completed btn" id="allCompletedTask">Completed <span id="completedNumber">0</span></p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="task-list">
+            <h3 id="insertName">Task List</h3>
+            <div class="row py-5 mx-auto d-flex" id="pushNote">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid badge-success fixed-bottom">
+        <div class="row">
+            <div class="col text-center py-2">
+                @created by <a href="https://dvlprsakib.rf.gd/"
+                    style="text-decoration: none; font-weight: bold; color: black" target="new">DevvSakib</a> | Can be
+                Modify or Use
+            </div>
+        </div>
+    </div>
+
+    <audio id="sound"></audio>
+    <audio id="relax"></audio>
+    <script src="app.js"></script>
+</body>
+
+</html>
