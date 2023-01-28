@@ -1,5 +1,4 @@
-body {
-}
+body {}
 
 .card-pd {
     padding: 0;
@@ -8,25 +7,29 @@ body {
     border-radius: 5px;
     box-shadow: 0 0 5px 5px rgba(100, 100, 100, 0.1);
 }
-.card-pd input{
+
+.card-pd input {
     border: none;
     border-radius: 0 !important;
     padding: 10px;
     width: 100%;
     outline: none;
-    padding:15px  20px !important;
+    padding: 15px 20px !important;
     background: transparent;
 }
-.card-pd button{
+
+.card-pd button {
     color: #fff;
     border: none;
     padding: 15px 30px;
     border-radius: 0 5px 5px 0;
 }
-.task-list{
+
+.task-list {
     margin-top: 3rem;
 }
-.card-pd input{
+
+.card-pd input {
     background: transparent;
 }
 
@@ -35,26 +38,31 @@ body {
     display: flex;
     justify-content: space-between;
 }
-.noteDiv > div{
-    display: flex; 
+
+.noteDiv>div {
+    display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .completed {
     margin: 0;
 }
-.completed{
+
+.completed {
     color: #fff;
     border-radius: 10px;
     padding: 5px 10px;
     background-color: #28a745;
     border-color: #28a745;
 }
-.completed span{
+
+.completed span {
     font-weight: bold;
     margin-left: 10px;
     font-size: 1.12rem;
 }
+
 .todoCard {
     background-color: white;
     border-radius: 6px;
@@ -73,7 +81,8 @@ body {
         visibility: visible;
     }
 }
-.music{
+
+.music {
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -81,13 +90,56 @@ body {
     border-radius: 10px;
 
 }
-#playSound{
+
+.playsound{
     width: 20px;
     cursor: pointer;
     margin-right: 5px;
 }
-
+.close{
+    margin: 30px;
+    z-index: 9999999;
+    cursor: pointer;
+}
 .music p {
     font-weight: 600;
     margin-bottom: 0 !important;
+}
+
+.taskC {
+    z-index: 111;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    backdrop-filter: blur(5px);
+}
+.taskComplete{
+    max-width: 800px;
+    height: 500px;
+    margin: auto;
+    overflow-y: scroll;
+}
+.hide{
+    display: none;
+}
+.open{
+    display: block;
+}
+.title {
+    margin-top: 4rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    background:linear-gradient(180deg,rgb(234, 0, 255),  rgb(82, 4, 228));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.pushComplete{
+
 }

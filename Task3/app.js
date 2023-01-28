@@ -4,7 +4,16 @@ let relaxingSound = document.getElementById('relax');
 let allCompletedTask = document.getElementById('allCompletedTask');
 let completedNumber = document.getElementById('completedNumber');
 let rainy = document.getElementById('playSound');
+let close = document.querySelector('.close');
+let open = document.querySelector('.completed');
 
+open.addEventListener('click', ()=> {
+    document.querySelector('.taskC').classList.add('open')
+})
+close.addEventListener('click', ()=> {
+    document.querySelector('.taskC').classList.add('hide')
+    document.querySelector('.taskC').classList.remove('open')
+})
 rainy.addEventListener('click', () => {
     if (!rainy.classList.contains('play')) {
         rainy.classList.add("play")
@@ -65,8 +74,9 @@ function funcy() {
         completedNumber.innerText = JSON.parse(completedTask).length;
         allnote = JSON.parse(localData);
     }
-
+    let a = JSON.parse(completedTask)
     let html = '';
+    let comp = '';
     allnote.forEach((e, index) => {
         html += `
         <div class="todoCard my-2 mx-3 p-4">
@@ -77,6 +87,22 @@ function funcy() {
         </div>
         `
     });
+    a.forEach((e, index) => {
+        comp += `
+        <div class="todoCard my-2 mx-3 p-4">
+            <h5 class="card-title">${index + 1}</h5>
+            <p class="card-text">${e}</p>
+            <button id="${index}" onclick="deleteNote(this.id)" class="btn btn-outline-danger">Delete</button>
+            <button id="${index}" onclick="completedNote(this.id)" class="btn btn-outline-success">Complete</button>
+        </div>
+        `
+    });
+    let compTask = document.getElementById('pushComplete');
+    if (a.length != 0) {
+        compTask.innerHTML = comp;
+    }else{
+        compTask.innerHTML = "Ops, No task Completed📃"
+    }
     let pushNote = document.getElementById('pushNote');
     if (allnote.length != 0) {
         pushNote.innerHTML = html;
@@ -84,6 +110,7 @@ function funcy() {
     else {
         pushNote.innerHTML = `List is empty📃`;
     }
+
 }
 
 function deleteNote(index) {
