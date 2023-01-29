@@ -80,11 +80,15 @@ function funcy() {
     let comp = '';
     allnote.forEach((e, index) => {
         html += `
-        <div class="todoCard my-2 mx-3 p-4">
-            <h5 class="card-title">${index + 1}</h5>
-            <p class="card-text">${e}</p>
-            <button id="${index}" onclick="deleteNote(this.id)" class="btn btn-outline-danger">Delete</button>
-            <button id="${index}" onclick="completedNote(this.id)" class="btn btn-outline-success">Complete</button>
+        <div id="tskbox">
+        <div class="col d-flex justify-content-between align-items-center todoCard my-2 mx-3 p-4">
+            <h5 class="card-number">${index + 1}</h5>
+            <p class="card-text ncTask">${e}</p>
+            <div class="d-flex gap">
+                <i id="${index}" onclick="deleteNote(this.id)" class="btn btn-outline-danger fa fa-close d-flex align-items-center"></i>
+                <i id="${index}" onclick="completedNote(this.id)" class="btn btn-outline-success fa fa-check d-flex align-items-center"></i>
+            </div>
+        </div>
         </div>
         `
     });
@@ -100,10 +104,12 @@ function funcy() {
     if (a) {
         a.forEach((e, index) => {
             comp += `
-        <div class="col todoCard my-2 mx-3 p-4">
-        <h5 class="card-title">${index + 1}</h5>
-        <p class="card-text">${e}</p>
-        <button id="${index}" onclick="deleteCoomplete(this.id)" class="btn btn-outline-danger">Delete</button>
+            <div id="tskbox">
+        <div class="col d-flex justify-content-between todoCard my-2 mx-3 p-4 py-5">
+        <h5 class="card-number mb-0 mr-2">${index + 1}</h5>
+        <p class="card-text mb-0">${e}</p>
+        <i id="${index}" onclick="deleteCoomplete(this.id)" class="btn btn-outline-danger fa fa-close d-flex align-items-center"></i>
+        </div>
         </div>
         `
         });

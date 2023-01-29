@@ -1,4 +1,6 @@
-body {}
+p{
+    margin-bottom: 0 !important;
+}
 
 .card-pd {
     padding: 0;
@@ -63,6 +65,7 @@ body {}
 }
 
 .todoCard {
+    position: relative;
     background-color: white;
     border-radius: 6px;
     color: #000 !important;
@@ -124,8 +127,15 @@ body {}
     height: 500px;
     margin: auto;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
-
+#pushComplete{
+    flex-direction: column;
+}
+#tskbox{
+    width: 90%;
+    margin: auto;
+}
 .hide {
     display: none;
 }
@@ -175,4 +185,25 @@ body {}
     .noteDiv > div{
         flex-direction: column;
     }
+    #tskbox{
+        margin-left: 0;
+    }
+}
+i{
+    height: 30px;
+}
+
+.card-number{
+    position: absolute;
+    top: 0;
+    left: 10px;    
+    font-size: 2rem;
+    opacity: 0.3;
+    font-weight: 700;
+}
+.ncTask{
+    padding-left: 2rem;
+}
+.gap{
+    gap: 10px;
 }
