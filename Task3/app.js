@@ -97,17 +97,20 @@ function funcy() {
         pushNote.innerHTML = `List is empty📃`;
     }
 
-    a.forEach((e, index) => {
-        comp += `
+    if (a) {
+        a.forEach((e, index) => {
+            comp += `
         <div class="col todoCard my-2 mx-3 p-4">
         <h5 class="card-title">${index + 1}</h5>
         <p class="card-text">${e}</p>
         <button id="${index}" onclick="deleteCoomplete(this.id)" class="btn btn-outline-danger">Delete</button>
         </div>
         `
-    });
+        });
+    }
+
     let compTask = document.getElementById('pushComplete');
-    if (a.length != 0) {
+    if (a != 0) {
         compTask.innerHTML = comp;
     } else {
         compTask.innerHTML = "Ops, No task Completed📃"
