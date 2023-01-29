@@ -90,6 +90,11 @@ body {}
     cursor: pointer;
     margin-right: 5px;
 }
+.noteDiv > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .close {
     margin: 30px;
@@ -167,5 +172,7 @@ body {}
         flex-direction: column !important;
         justify-content: center;
     }
-
+    .noteDiv > div{
+        flex-direction: column;
+    }
 }
