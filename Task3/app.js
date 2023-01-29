@@ -7,25 +7,25 @@ let rainy = document.getElementById('playSound');
 let close = document.querySelector('.close');
 let open = document.querySelector('.completed');
 
-open.addEventListener('click', ()=> {
+open.addEventListener('click', () => {
     document.querySelector('.taskC').classList.add('open')
 })
-close.addEventListener('click', ()=> {
+close.addEventListener('click', () => {
     document.querySelector('.taskC').classList.add('hide')
     document.querySelector('.taskC').classList.remove('open')
 })
 rainy.addEventListener('click', () => {
     if (!rainy.classList.contains('play')) {
         rainy.classList.add("play")
-        rainy.src="./pause-solid.svg"
+        rainy.src = "./pause-solid.svg"
         relaxingSound.src = "./relax.mp3";
         relaxingSound.loop = true
         relaxingSound.play()
         console.log("Playing...");
     }
-    else{
+    else {
         rainy.classList.remove("play")
-        rainy.src="./play-solid.svg"
+        rainy.src = "./play-solid.svg"
         relaxingSound.src = "";
         relaxingSound.pause()
         console.log("Paused");
@@ -61,17 +61,18 @@ function funcy() {
     let completedTask = localStorage.getItem('completedTask');
 
     if (complTa == null) {
-        completedNumber.innerText = 0
+        completedNumber.innerText = 0;
+        completedNumber.style.color = "red"
         complete = [];
     }
     else {
         complete = JSON.parse(complTa);
+        completedNumber.innerText = JSON.parse(completedTask).length;
     }
     if (localData == null) {
         allnote = [];
     }
     else {
-        completedNumber.innerText = JSON.parse(completedTask).length;
         allnote = JSON.parse(localData);
     }
     let a = JSON.parse(completedTask)
@@ -87,28 +88,29 @@ function funcy() {
         </div>
         `
     });
-    a.forEach((e, index) => {
-        comp += `
-        <div class="todoCard my-2 mx-3 p-4">
-            <h5 class="card-title">${index + 1}</h5>
-            <p class="card-text">${e}</p>
-            <button id="${index}" onclick="deleteNote(this.id)" class="btn btn-outline-danger">Delete</button>
-            <button id="${index}" onclick="completedNote(this.id)" class="btn btn-outline-success">Complete</button>
-        </div>
-        `
-    });
-    let compTask = document.getElementById('pushComplete');
-    if (a.length != 0) {
-        compTask.innerHTML = comp;
-    }else{
-        compTask.innerHTML = "Ops, No task Completed📃"
-    }
+
     let pushNote = document.getElementById('pushNote');
     if (allnote.length != 0) {
         pushNote.innerHTML = html;
     }
     else {
         pushNote.innerHTML = `List is empty📃`;
+    }
+
+    a.forEach((e, index) => {
+        comp += `
+        <div class="col todoCard my-2 mx-3 p-4">
+        <h5 class="card-title">${index + 1}</h5>
+        <p class="card-text">${e}</p>
+        <button id="${index}" onclick="deleteCoomplete(this.id)" class="btn btn-outline-danger">Delete</button>
+        </div>
+        `
+    });
+    let compTask = document.getElementById('pushComplete');
+    if (a.length != 0) {
+        compTask.innerHTML = comp;
+    } else {
+        compTask.innerHTML = "Ops, No task Completed📃"
     }
 
 }
@@ -153,7 +155,20 @@ function completedNote(index) {
     localStorage.setItem('completedTask', JSON.stringify(complete));
     funcy();
 };
-
+function deleteCoomplete(index) {
+    let complTa = localStorage.getItem('completedTask');
+    if (complTa == null) {
+        complete = [];
+    }
+    else {
+        complete = JSON.parse(complTa);
+    }
+    complete.splice(index, 1);
+    soundEffect.src = "./delete.mp3"
+    soundEffect.play()
+    localStorage.setItem('completedTask', JSON.stringify(complete));
+    funcy();
+};
 /*
 let txtSearch = document.getElementById('txtSearch');
 

@@ -15,8 +15,9 @@
 
     <div class="music">
         <p>
-        <img id="playSound" class="playsound" src="./play-solid.svg" alt="">
-            Relaxing Sound</p>
+            <img id="playSound" class="playsound" src="./play-solid.svg" alt="">
+            Relaxing Sound
+        </p>
     </div>
     <div class="container py-5 mx-auto">
         <!-- Note input section began -->
@@ -28,7 +29,7 @@
                     <button class="btn btn-danger" id="inputNote">Add</button>
                 </div>
                 <div>
-                    <p class="completed btn" id="allCompletedTask" >Completed <span id="completedNumber">0</span></p>
+                    <p class="completed btn" id="allCompletedTask">Completed <span id="completedNumber">0</span></p>
                 </div>
             </div>
         </div>
@@ -41,6 +42,17 @@
         </div>
     </div>
 
+    <section class="taskC hide">
+        <img class="playsound close" src="./xmark-solid.svg" alt="">
+        <h3 class="title">Completed Task</h3>
+        <div class="taskComplete">
+            <div class="row mx-2 py-5" id="pushComplete">
+
+            </div>
+
+        </div>
+    </section>
+
     <div class="container-fluid badge-success fixed-bottom">
         <div class="row">
             <div class="col text-center py-2">
@@ -50,19 +62,6 @@
             </div>
         </div>
     </div>
-
-
-    <section class="taskC hide">
-        <img class="playsound close" src="./xmark-solid.svg" alt="">
-        <h3 class="title">Completed Task</h3>
-        <div class="taskComplete">
-            <div class="row py-5 mx-auto d-flex" id="pushComplete">
-
-            </div>
-
-        </div>
-    </section>
-
 
     <audio id="sound"></audio>
     <audio id="relax"></audio>
