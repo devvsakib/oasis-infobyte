@@ -71,7 +71,7 @@ function funcy() {
 
     localData == null ? alltask = [] : alltask = JSON.parse(localData);
 
-    let a = JSON.parse(completedTask)
+    let cpTask = JSON.parse(completedTask)
     let html = '';
     let comp = '';
     alltask.forEach((e, index) => {
@@ -94,8 +94,8 @@ function funcy() {
 
     alltask.length != 0 ? pushNote.innerHTML = html : pushNote.innerHTML = `List is empty📃`;
 
-    if (a) {
-        a.forEach((e, index) => {
+    if (cpTask) {
+        cpTask.forEach((e, index) => {
             comp += `
             <div id="tskbox">
         <div class="col d-flex justify-content-between todoCard my-2 mx-3 p-4 py-5">
@@ -110,7 +110,7 @@ function funcy() {
 
     let compTask = document.getElementById('pushComplete');
 
-    a != 0 ? compTask.innerHTML = comp : compTask.innerHTML = "<h3 style='color:blue'>Ops, No task Completed📃</h3>";
+    cpTask != 0 ? compTask.innerHTML = comp : compTask.innerHTML = "<h3 style='color:blue'>Ops, No task Completed📃</h3>";
 
 }
 
@@ -176,27 +176,4 @@ function editTask(index) {
     alltask.splice(index, 1, edit);
     localStorage.setItem('taskSame', JSON.stringify(alltask));
     funcy();
-
-
-
 }
-
-/*
-let txtSearch = document.getElementById('txtSearch');
-
-txtSearch.addEventListener('input', () => {
-    let getinputTxt = txtSearch.value.toLowerCase();
-    Array.from(document.getElementsByClassName("card")).forEach(element => {
-        let getTxt = element.getElementsByTagName("p")[0].innerText;
-        if (getTxt.includes(getinputTxt)) {
-
-            element.style.display = "block";
-
-        }
-        else {
-            element.style.display = "none";
-        }
-    });
-
-});
-*/
