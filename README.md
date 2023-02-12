@@ -1,4 +1,4 @@
-# Task1 - Tribute Page
+# Task2 - Tribute Page
 [Live](https://devvsakib.github.io/oasis-infobyte/Task1)
 
 # Task3 - Todo webapp
