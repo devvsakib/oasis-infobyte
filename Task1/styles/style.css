@@ -50,34 +50,20 @@ ul {
   border-radius: 5px;
   cursor: pointer;
   color: rgb(255, 255, 255);
-  -webkit-animation: upDown 1000ms linear infinite;
-          animation: upDown 1000ms linear infinite;
+  animation: upDown 1000ms linear infinite;
 }
 
 .up-down {
   display: flex;
   flex-direction: row;
   gap: 1.2rem;
-  -webkit-animation: upDown 1000ms linear infinite;
-          animation: upDown 1000ms linear infinite;
+  animation: upDown 1000ms linear infinite;
   position: absolute;
   bottom: 2rem;
   left: 10px;
 }
 .up-down i {
   color: #000;
-}
-
-@-webkit-keyframes upDown {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
 
 @keyframes upDown {
@@ -183,7 +169,7 @@ ul {
 
 #fourth-page {
   max-width: 900px;
-  padding: 3rem 0;
+  padding: 3rem 2rem;
   height: auto;
 }
 #fourth-page .container {
@@ -232,10 +218,10 @@ ul {
 #fourth-page .line {
   position: absolute;
   left: -20px;
-  top: 40px;
+  top: 5rem;
   transform: translateY(40px);
   width: 2px;
-  height: 100%;
+  height: 89%;
   background: rgb(0, 204, 255);
 }
 #fourth-page .inv-title {
@@ -247,4 +233,22 @@ ul {
   font-weight: 400;
   margin-top: 10px;
   letter-spacing: normal;
+}
+
+@media (max-width: 668px) {
+  .line {
+    height: 90%;
+    top: 6.5rem !important;
+  }
+}
+@media (max-width: 550px) {
+  .line {
+    height: 90%;
+  }
+}
+@media (max-width: 450px) {
+  .line {
+    top: 10rem !important;
+    height: 89% !important;
+  }
 }/*# sourceMappingURL=style.css.map */
