@@ -7,6 +7,11 @@
   box-sizing: border-box;
 }
 
+a {
+  color: #000;
+  text-decoration: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -149,6 +154,18 @@ ul {
     text-align: center;
   }
 }
+.biography {
+  height: auto;
+}
+.biography .bio {
+  margin-bottom: 8rem;
+}
+.biography .bio h4 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  color: aquamarine;
+}
 .biography h3 {
   font-size: 2rem;
   text-transform: uppercase;
@@ -191,8 +208,11 @@ ul {
 #fourth-page span {
   font-weight: bold;
 }
+#fourth-page .up-down {
+  left: -8.5vw;
+}
 #fourth-page .up-down i {
-  color: white;
+  color: rgb(0, 0, 0);
 }
 #fourth-page ul {
   position: relative;
@@ -235,6 +255,42 @@ ul {
   letter-spacing: normal;
 }
 
+.pQuote {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+.pQuote span {
+  color: rgb(0, 204, 255);
+  text-align: right;
+  display: block;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 976px) {
+  #fourth-page .up-down {
+    left: 1rem !important;
+  }
+  .banner {
+    background-position: right 5rem;
+    background-size: 100%;
+  }
+  .banner::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
 @media (max-width: 668px) {
   .line {
     height: 90%;
@@ -245,8 +301,14 @@ ul {
   .line {
     height: 90%;
   }
+  .banner {
+    background-position: right 10rem;
+  }
 }
 @media (max-width: 450px) {
+  .banner {
+    background-position: right bottom;
+  }
   .line {
     top: 10rem !important;
     height: 89% !important;
